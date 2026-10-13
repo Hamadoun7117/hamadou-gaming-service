@@ -1,0 +1,286 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: #050a07;
+    color: #f1f5f2;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.entete {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 22px 7%;
+    border-bottom: 1px solid #203427;
+}
+
+.logo {
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.logo span,
+h1 span,
+h2 span {
+    color: #42ed7b;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 22px;
+}
+
+nav a {
+    color: #c1cbc4;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #42ed7b;
+}
+
+.hero {
+    text-align: center;
+    padding: 100px 7%;
+}
+
+.surtitre {
+    color: #42ed7b;
+    letter-spacing: 3px;
+    font-weight: bold;
+}
+
+h1 {
+    max-width: 850px;
+    margin: 20px auto;
+    font-size: clamp(35px, 6vw, 64px);
+    line-height: 1.15;
+}
+
+.description {
+    color: #aab7ae;
+    font-size: 19px;
+    margin-bottom: 32px;
+}
+
+.bouton {
+    display: inline-block;
+    padding: 15px 25px;
+    background: #42ed7b;
+    color: #07140b;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 12px;
+}
+
+.bouton:hover {
+    background: #8affad;
+}
+
+.jeux,
+.contact {
+    padding: 65px 7%;
+    border-top: 1px solid #203427;
+}
+
+h2 {
+    font-size: 36px;
+}
+
+.grille-jeux {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+    margin-top: 30px;
+}
+
+.carte {
+    padding: 25px;
+    border: 1px solid #284532;
+    border-radius: 14px;
+    background: #0b140e;
+}
+
+.image-jeu {
+    display: grid;
+    place-items: center;
+    min-height: 120px;
+    background: #12251a;
+    border-radius: 10px;
+    font-size: 55px;
+}
+
+.carte a {
+    color: #42ed7b;
+}
+
+footer {
+    padding: 25px;
+    text-align: center;
+    color: #aab7ae;
+    border-top: 1px solid #203427;
+}
+
+@media (max-width: 750px) {
+    .entete {
+        flex-direction: column;
+    }
+
+    .hero {
+        padding: 65px 6%;
+    }
+
+    nav {
+        justify-content: center;
+    }
+
+    .grille-jeux {
+        grid-template-columns: 1fr;
+    }
+}.games {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.games h2 {
+    color: #39ff14;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.games-intro {
+    color: #cccccc;
+    margin-bottom: 30px;
+}
+
+.games-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.game-card {
+    background: #151515;
+    border: 1px solid #292929;
+    border-radius: 12px;
+    overflow: hidden;
+    padding-bottom: 20px;
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.game-card:hover {
+    transform: translateY(-6px);
+    border-color: #39ff14;
+}
+
+.game-card img {
+    display: block;
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+}
+
+.game-card h3 {
+    color: white;
+    margin: 16px 8px 8px;
+}
+
+.game-card p {
+    color: #aaaaaa;
+    padding: 0 10px;
+}
+
+.game-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 14px;
+    background: #39ff14;
+    color: #111111;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 6px;
+}
+
+@media (max-width: 750px) {
+    .games-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 450px) {
+    .games-container {
+        grid-template-columns: 1fr;
+    }
+}
+/* SECTION CONTACT */
+.contact-section {
+    text-align: center;
+    padding: 40px 20px;
+    margin-top: 30px;
+    background: #111827;
+    color: white;
+    border-top: 2px solid #00e676;
+}
+
+.contact-section h2 {
+    color: #00e676;
+    margin-bottom: 15px;
+}
+
+.contact-section p {
+    margin-bottom: 25px;
+    color: #cccccc;
+}
+
+.contact-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.contact-btn {
+    display: inline-block;
+    padding: 13px 20px;
+    background: #00e676;
+    color: #101010;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.contact-btn:hover {
+    background: white;
+    transform: translateY(-3px);
+}
+
+.whatsapp-btn {
+    background: #25D366;
+}
+
+@media (max-width: 500px) {
+    .contact-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-btn {
+        width: 85%;
+        box-sizing: border-box;
+    }
+}
